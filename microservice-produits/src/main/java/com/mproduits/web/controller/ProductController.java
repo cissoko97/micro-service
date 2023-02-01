@@ -22,7 +22,7 @@ public class ProductController {
     public List<Product> listeDesProduits(){
 
         List<Product> products = productDao.findAll();
-
+        System.out.println("is empty " + products.isEmpty());
         if(products.isEmpty()) throw new ProductNotFoundException("Aucun produit n'est disponible à la vente");
 
         return products;
